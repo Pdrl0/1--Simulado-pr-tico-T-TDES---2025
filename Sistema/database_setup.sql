@@ -17,10 +17,11 @@ create table professores(
 
 create table atividades(
     id_atividades int not null auto_increment;
-    materia varchar not null,
-    fk_professor int not null,
-    fk_turma int not null,
-    foreigne key fk_professor references professores(id_professor),
-    foreigne key fk_turma references turmas(id_turma)
+    numero int not null,
+    descricao varchar(45) not null,
+    fk_professor int,
+    fk_turma int,
+    foreigne key fk_professor references professores(id_professor) on delete cascade on update,
+    foreigne key fk_turma references turmas(id_turma) on delete cascade on update
 
 );
