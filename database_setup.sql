@@ -11,7 +11,7 @@ create table turmas(
 create table professores(
     id_professores int not null auto_increment;
     email varchar(45) not null,
-    SENHA varchar(45) not null
+    senha varchar(45) not null
 
 )
 
