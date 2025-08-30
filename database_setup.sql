@@ -10,12 +10,8 @@ create table turmas(
 
 create table professores(
     id_professores int not null auto_increment;
-    nome varchar(60) not null;
     email varchar(45) not null,
-    idade int not null,
-    cpf varchar (11) not null,
-    telefone varchar (11) not null
-    cep varchar (8) not null,
+    SENHA varchar(45) not null
 
 )
 
