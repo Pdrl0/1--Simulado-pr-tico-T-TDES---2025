@@ -6,12 +6,6 @@ create table turmas(
     numero_alunos int not null;
     ano_serie int not null
 
-
-)
-
-create table atividades(
-    id_atividades int not null auto_increment;
-
 )
 
 create table professores(
@@ -25,10 +19,12 @@ create table professores(
 
 )
 
-create table professores_turma (
-    fk_professor int not null
+create table atividades(
+    id_atividades int not null auto_increment;
+    materia varchar not null,
+    fk_professor int not null,
     fk_turma int not null,
     foreigne key fk_professor references professores(id_professor),
-    foreigne key fk_turma references turmas(id_turma),
-    
+    foreigne key fk_turma references turmas(id_turma)
+
 )
