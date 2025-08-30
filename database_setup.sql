@@ -25,3 +25,10 @@ create table professores(
 
 )
 
+create table professores_turma (
+    fk_professor int not null
+    fk_turma int not null,
+    foreigne key fk_professor references professores(id_professor),
+    foreigne key fk_turma references turmas(id_turma),
+    
+)
